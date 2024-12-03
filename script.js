@@ -1,13 +1,11 @@
-function updateClock() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
+document.getElementById('set-times').addEventListener('click', function() {
+    const wakeUpTime = document.getElementById('wake-up-time').value;
+    const lunchTime = document.getElementById('lunch-time').value;
+    const napTime = document.getElementById('nap-time').value;
+    const nightTime = document.getElementById('night-time').value;
 
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    document.getElementById('clock').textContent = timeString;
-}
-
-// Update the clock immediately and then every second
-updateClock();
-setInterval(updateClock, 1000);
+    document.getElementById('wake-up-output').innerText = `Wake Up Time: ${wakeUpTime || '---------------'}`;
+    document.getElementById('lunch-output').innerText = `Lunch Time: ${lunchTime || '---------------'}`;
+    document.getElementById('nap-output').innerText = `Nap Time: ${napTime || '---------------'}`;
+    document.getElementById('night-output').innerText = `Night Time: ${nightTime || '---------------'}`;
+});
