@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock</title>
+    <title>Daily Schedule</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="clock" id="clock"></div>
+    <div class="container">
+        <h1>Daily Schedule</h1>
+        <div class="time-settings">
+            <label for="wake-up-time">Set Wake Up Time:</label>
+            <input type="time" id="wake-up-time">
+
+            <label for="lunch-time">Set Lunch Time:</label>
+            <input type="time" id="lunch-time">
+
+            <label for="nap-time">Set Nap Time:</label>
+            <input type="time" id="nap-time">
+
+            <label for="night-time">Set Night Time:</label>
+            <input type="time" id="night-time">
+
+            <button id="set-times">Set Times</button>
+        </div>
+
+        <div class="schedule-output">
+            <h2>Your Schedule:</h2>
+            <p id="wake-up-output">Wake Up Time: ---------------</p>
+            <p id="lunch-output">Lunch Time: ---------------</p>
+            <p id="nap-output">Nap Time: ---------------</p>
+            <p id="night-output">Night Time: ---------------</p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
